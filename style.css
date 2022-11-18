@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+/**************************** head **************************/
+#top-head {
+  height: 25px;
+  background-color: #303C6C;
+  position: relative;
+}
+#top-head #social-contact p {
+  position: absolute;
+  display: inline-block;
+  color: white;
+  top: 2px;
+  left: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+#top-head #social-contact img:hover {
+  cursor: pointer;
+}
+#top-head #social-contact #instagram-icon {
+  position: absolute;
+  left: 150px;
+}
+#top-head #social-contact #telegram-icon {
+  position: absolute;
+  left: 180px;
+}
+#top-head #call-contact {
+  position: absolute;
+  font-size: 14px;
+  right: 20px;
+}
+#top-head #call-contact span {
+  color: white;
+}
+#top-head #call-contact a {
+  text-decoration: none;
+  color: #f3a27d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#top-head #call-contact a:hover {
+  color: #B4DFE5;
+}
+
+#nav-bar h4 {
+  position: absolute;
+  display: inline-block;
+  color: #835c08;
+  top: 40px;
+}/*# sourceMappingURL=style.css.map */
