@@ -1,3 +1,7 @@
+test {
+  border: 2px solid black;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +12,7 @@
 /**************************** head **************************/
 #top-head {
   height: 25px;
-  background-color: #303C6C;
+  background-color: #434247;
   position: relative;
 }
 #top-head #social-contact p {
@@ -24,12 +28,21 @@
   cursor: pointer;
 }
 #top-head #social-contact #instagram-icon {
+  width: 25px;
   position: absolute;
   left: 150px;
+  transition: all 0.5s;
+}
+#top-head #social-contact #instagram-icon:hover {
+  transform: rotate(360deg);
 }
 #top-head #social-contact #telegram-icon {
   position: absolute;
   left: 180px;
+  transition: all 0.5s;
+}
+#top-head #social-contact #telegram-icon:hover {
+  transform: rotate(360deg);
 }
 #top-head #call-contact {
   position: absolute;
@@ -41,16 +54,97 @@
 }
 #top-head #call-contact a {
   text-decoration: none;
-  color: #f3a27d;
+  color: #41c0b5;
   font-family: Arial, Helvetica, sans-serif;
 }
 #top-head #call-contact a:hover {
-  color: #B4DFE5;
+  color: #1f9589;
 }
 
-#nav-bar h4 {
-  position: absolute;
-  display: inline-block;
-  color: #835c08;
-  top: 40px;
+#nav-bar {
+  z-index: 2;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  float: right;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 100%;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+}
+#nav-bar #nav-bar-left-side {
+  float: left;
+  margin-left: 20px;
+}
+#nav-bar #nav-bar-left-side img {
+  float: left;
+}
+#nav-bar #nav-bar-left-side h4 {
+  font-family: yekan-bakh-pro, titillium;
+  float: left;
+  margin: 15px 0 15px 5px;
+  color: #6d430c;
+}
+#nav-bar #nav-bar-icons {
+  float: right;
+}
+#nav-bar #nav-bar-icons a {
+  text-decoration: none;
+}
+#nav-bar #nav-bar-icons .nav-bar-icon {
+  float: right;
+  font-family: yekan-bakh-pro, titillium;
+  padding: 15px;
+  color: #5c5a66;
+}
+#nav-bar #nav-bar-icons .nav-bar-icon:after,
+#nav-bar #nav-bar-icons .nav-bar-icon:before {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 2px solid rgba(255, 255, 255, 0);
+  bottom: -15px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+#nav-bar #nav-bar-icons .nav-bar-icon:hover::after {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-color: #1f9589;
+  transition: width 350ms ease-in-out;
+  width: 100%;
+}
+#nav-bar #nav-bar-icons .nav-bar-icon:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+#main-them {
+  margin-top: -35px;
+  text-align: center;
+  float: right;
+  width: 100%;
+  height: 730px;
+  background-image: url("pic/main-them.png");
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#main-them #main-them-title {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  margin: 180px 90px;
+  float: right;
+}
+#main-them #main-them-title h1 {
+  font-size: 45px;
+  font-family: yekan-bakh-pro, titillium;
+  color: #1f9589;
+}
+#main-them #main-them-title h3 {
+  font-family: yekan-bakh-pro, titillium;
+  font-size: 25px;
+  color: #434247;
 }/*# sourceMappingURL=style.css.map */
