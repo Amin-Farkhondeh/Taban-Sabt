@@ -20,8 +20,8 @@ test{
     height: 25px;
     background-color: $threeColor;
     position: relative;
+        /*** راه های ارتباطی***/
     #social-contact{
-
         p{
             position: absolute;
             display: inline-block;
@@ -55,7 +55,7 @@ test{
             }
         }
     }
-
+    /*** همین حالا تماس بگیرید ***/
     #call-contact{
         position: absolute;
         font-size: 14px;
@@ -74,6 +74,7 @@ test{
     }
    
 }
+/***** navigation bar *******/
 #nav-bar{
     z-index: 2;
     position: sticky;
@@ -120,24 +121,23 @@ test{
          position: relative;
          transition: all 280ms ease-in-out;
          width: 0;
-}
-.nav-bar-icon:hover::after {
+            }
+    .nav-bar-icon:hover::after {
           backface-visibility: hidden;
          border-color: $OneColor;
          transition: width 350ms ease-in-out;
          width: 100%;
-}
-.nav-bar-icon:hover:before {
+        }
+    .nav-bar-icon:hover:before {
          bottom: auto;
          top: 0;
          width: 70%;
+        }
+        }  
 }
-    }
-    
-}
-
+/*** main them design ***/
 #main-them{
-    margin-top: -35px;
+    margin-top: -60px;
     text-align: center;
     float: right;
     width: 100%;
@@ -160,4 +160,40 @@ test{
         }
     }
 }
+/*** middle them design ***/
 
+#middle-them{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border : 1px solid transparent;
+    .middle-them-title{
+        img{
+            margin : 15px;
+            border-radius: 20px;
+            height: 200px;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+        h2{
+            font-family: $mainFont;
+            color : $fiveColor;
+            margin:10px 5px;
+        }
+        h3{
+            font-family: arial;
+            font-size: 15px;
+            text-align: justify;
+            text-align-last: right;
+            margin : 10px 30px;
+        }
+        border-radius: 25px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin: 40px 50px;
+        min-width: 320px;
+        max-width: 320px;
+        height: 570px;
+    }
+
+}

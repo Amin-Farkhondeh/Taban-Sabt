@@ -1,3 +1,4 @@
+@charset "UTF-8";
 test {
   border: 2px solid black;
 }
@@ -14,6 +15,8 @@ test {
   height: 25px;
   background-color: #434247;
   position: relative;
+  /*** راه های ارتباطی***/
+  /*** همین حالا تماس بگیرید ***/
 }
 #top-head #social-contact p {
   position: absolute;
@@ -61,6 +64,7 @@ test {
   color: #1f9589;
 }
 
+/***** navigation bar *******/
 #nav-bar {
   z-index: 2;
   position: -webkit-sticky;
@@ -123,8 +127,9 @@ test {
   width: 70%;
 }
 
+/*** main them design ***/
 #main-them {
-  margin-top: -35px;
+  margin-top: -60px;
   text-align: center;
   float: right;
   width: 100%;
@@ -147,4 +152,41 @@ test {
   font-family: yekan-bakh-pro, titillium;
   font-size: 25px;
   color: #434247;
+}
+
+/*** middle them design ***/
+#middle-them {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid transparent;
+}
+#middle-them .middle-them-title {
+  border-radius: 25px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 40px 50px;
+  min-width: 320px;
+  max-width: 320px;
+  height: 570px;
+}
+#middle-them .middle-them-title img {
+  margin: 15px;
+  border-radius: 20px;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+#middle-them .middle-them-title h2 {
+  font-family: yekan-bakh-pro, titillium;
+  color: #febc68;
+  margin: 10px 5px;
+}
+#middle-them .middle-them-title h3 {
+  font-family: arial;
+  font-size: 15px;
+  text-align: justify;
+  -moz-text-align-last: right;
+       text-align-last: right;
+  margin: 10px 30px;
 }/*# sourceMappingURL=style.css.map */
