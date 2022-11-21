@@ -1,17 +1,30 @@
+@font-face {
+    font-family: b-yekan;
+    src: url(fonts/Yekan.ttf);
+  }
+  @font-face {
+    font-family: iran-sans;
+    src: url(fonts/iran-sans.ttf);
+  }
+  @font-face {
+    font-family: vazir;
+    src: url(fonts/vazir.ttf);
+  }
 $OneColor : #1f9589;
 $twoColor : #41c0b5;
 $threeColor : #434247;
 $fourColor : #5c5a66;
 $fiveColor : #febc68;
 $sixColor : #fcdb8c;
-$mainFont : yekan-bakh-pro,titillium;
+$mainFont : iran-sans;
+$titleFont : vazir;
 test{
     border : 2px solid black;
 }
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $mainFont;
     box-sizing: border-box;
 }
 
@@ -27,9 +40,9 @@ test{
             display: inline-block;
             color : white;
             top : 2px;
-            left: 20px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 14px;
+            left: 90px;
+            font-family:$titleFont;
+            font-size: 13px;
 
         }
         img{
@@ -40,7 +53,7 @@ test{
         #instagram-icon{
             width: 25px;
             position: absolute;
-            left: 150px;
+            left: 20px;
             transition: all 0.5s;
             &:hover{
                 transform: rotate(360deg);
@@ -48,7 +61,7 @@ test{
         }
         #telegram-icon{
             position: absolute;
-            left : 180px;
+            left : 55px;
             transition: all 0.5s;
             &:hover{
                 transform: rotate(360deg);
@@ -57,8 +70,8 @@ test{
     }
     /*** همین حالا تماس بگیرید ***/
     #call-contact{
-        position: absolute;
-        font-size: 14px;
+        margin-right: 20px;
+        font-size: 13px;
         right: 20px;
         span{
             color : white;
@@ -66,7 +79,8 @@ test{
         a{
             text-decoration: none;
             color : $twoColor;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $titleFont;
+            font-size: 13px;
             &:hover{
                 color : $OneColor;
             }
@@ -82,19 +96,20 @@ test{
     float: right;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 100%;
-    backdrop-filter: blur(30px);
+    background-color: $twoColor;
     #nav-bar-left-side{
         float: left;
         margin-left: 20px;
-        
         img{
             float: left;
+            margin: 2px;
         }
         h4{
-            font-family: $mainFont;
+            font-family: $titleFont;
+            font-size: 13px;
             float: left;
             margin: 15px 0 15px 5px;
-            color: #6d430c;
+            color: $threeColor;
             
         }
     }
@@ -106,15 +121,16 @@ test{
         .nav-bar-icon{
             float: right;
             font-family: $mainFont;
-            padding: 15px;
+            padding: 10px;
             color: $fourColor;
-            
+            font-size : 14px;
+            text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
         }
     .nav-bar-icon:after,
     .nav-bar-icon:before {
         backface-visibility: hidden;
-       border: 2px solid rgba(#fff, 0);
-         bottom: -15px;
+        border: 2px solid rgba(#fff, 0);
+        bottom: -10px;
         content: " ";
           display: block;
          margin: 0 auto;
@@ -137,7 +153,6 @@ test{
 }
 /*** main them design ***/
 #main-them{
-    margin-top: -60px;
     text-align: center;
     float: right;
     width: 100%;
@@ -145,17 +160,18 @@ test{
     background-image: url('pic/main-them.png');
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     #main-them-title{
-       backdrop-filter: blur(10px);
+        border-radius: 25px;
         margin: 180px 90px;
         float: right;
         h1{
-            font-size: 45px;
+            font-size: 40px;
             font-family: $mainFont;
             color: $OneColor;
+            text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
         }
         h3{
             font-family: $mainFont;
-            font-size: 25px;
+            font-size: 20px;
             color:$threeColor;
         }
     }
@@ -176,24 +192,24 @@ test{
         }
         h2{
             font-family: $mainFont;
+            font-size: 20px;
             color : $fiveColor;
             margin:10px 5px;
         }
         h3{
-            font-family: arial;
-            font-size: 15px;
             text-align: justify;
-            text-align-last: right;
+            font-family: b-yekan;
+            font-size: 13px;
             margin : 10px 30px;
         }
         border-radius: 25px;
         overflow: hidden;
         text-align: center;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        margin: 40px 50px;
+        margin: 40px 10px;
         min-width: 320px;
         max-width: 320px;
-        height: 570px;
+        height: 650px;
     }
 
 }

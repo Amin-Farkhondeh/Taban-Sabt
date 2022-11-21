@@ -1,4 +1,16 @@
 @charset "UTF-8";
+@font-face {
+  font-family: b-yekan;
+  src: url(fonts/Yekan.ttf);
+}
+@font-face {
+  font-family: iran-sans;
+  src: url(fonts/iran-sans.ttf);
+}
+@font-face {
+  font-family: vazir;
+  src: url(fonts/vazir.ttf);
+}
 test {
   border: 2px solid black;
 }
@@ -6,7 +18,7 @@ test {
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: iran-sans;
   box-sizing: border-box;
 }
 
@@ -23,9 +35,9 @@ test {
   display: inline-block;
   color: white;
   top: 2px;
-  left: 20px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  left: 90px;
+  font-family: vazir;
+  font-size: 13px;
 }
 #top-head #social-contact img:hover {
   cursor: pointer;
@@ -33,7 +45,7 @@ test {
 #top-head #social-contact #instagram-icon {
   width: 25px;
   position: absolute;
-  left: 150px;
+  left: 20px;
   transition: all 0.5s;
 }
 #top-head #social-contact #instagram-icon:hover {
@@ -41,15 +53,15 @@ test {
 }
 #top-head #social-contact #telegram-icon {
   position: absolute;
-  left: 180px;
+  left: 55px;
   transition: all 0.5s;
 }
 #top-head #social-contact #telegram-icon:hover {
   transform: rotate(360deg);
 }
 #top-head #call-contact {
-  position: absolute;
-  font-size: 14px;
+  margin-right: 20px;
+  font-size: 13px;
   right: 20px;
 }
 #top-head #call-contact span {
@@ -58,7 +70,8 @@ test {
 #top-head #call-contact a {
   text-decoration: none;
   color: #41c0b5;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: vazir;
+  font-size: 13px;
 }
 #top-head #call-contact a:hover {
   color: #1f9589;
@@ -73,8 +86,7 @@ test {
   float: right;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: 100%;
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  background-color: #41c0b5;
 }
 #nav-bar #nav-bar-left-side {
   float: left;
@@ -82,12 +94,14 @@ test {
 }
 #nav-bar #nav-bar-left-side img {
   float: left;
+  margin: 2px;
 }
 #nav-bar #nav-bar-left-side h4 {
-  font-family: yekan-bakh-pro, titillium;
+  font-family: vazir;
+  font-size: 13px;
   float: left;
   margin: 15px 0 15px 5px;
-  color: #6d430c;
+  color: #434247;
 }
 #nav-bar #nav-bar-icons {
   float: right;
@@ -97,16 +111,18 @@ test {
 }
 #nav-bar #nav-bar-icons .nav-bar-icon {
   float: right;
-  font-family: yekan-bakh-pro, titillium;
-  padding: 15px;
+  font-family: iran-sans;
+  padding: 10px;
   color: #5c5a66;
+  font-size: 14px;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
 }
 #nav-bar #nav-bar-icons .nav-bar-icon:after,
 #nav-bar #nav-bar-icons .nav-bar-icon:before {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   border: 2px solid rgba(255, 255, 255, 0);
-  bottom: -15px;
+  bottom: -10px;
   content: " ";
   display: block;
   margin: 0 auto;
@@ -129,7 +145,6 @@ test {
 
 /*** main them design ***/
 #main-them {
-  margin-top: -60px;
   text-align: center;
   float: right;
   width: 100%;
@@ -138,19 +153,19 @@ test {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 #main-them #main-them-title {
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  border-radius: 25px;
   margin: 180px 90px;
   float: right;
 }
 #main-them #main-them-title h1 {
-  font-size: 45px;
-  font-family: yekan-bakh-pro, titillium;
+  font-size: 40px;
+  font-family: iran-sans;
   color: #1f9589;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
 }
 #main-them #main-them-title h3 {
-  font-family: yekan-bakh-pro, titillium;
-  font-size: 25px;
+  font-family: iran-sans;
+  font-size: 20px;
   color: #434247;
 }
 
@@ -166,10 +181,10 @@ test {
   overflow: hidden;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin: 40px 50px;
+  margin: 40px 10px;
   min-width: 320px;
   max-width: 320px;
-  height: 570px;
+  height: 650px;
 }
 #middle-them .middle-them-title img {
   margin: 15px;
@@ -178,15 +193,14 @@ test {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 #middle-them .middle-them-title h2 {
-  font-family: yekan-bakh-pro, titillium;
+  font-family: iran-sans;
+  font-size: 20px;
   color: #febc68;
   margin: 10px 5px;
 }
 #middle-them .middle-them-title h3 {
-  font-family: arial;
-  font-size: 15px;
   text-align: justify;
-  -moz-text-align-last: right;
-       text-align-last: right;
+  font-family: b-yekan;
+  font-size: 13px;
   margin: 10px 30px;
 }/*# sourceMappingURL=style.css.map */
