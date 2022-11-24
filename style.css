@@ -196,29 +196,34 @@ body {
   text-align: center;
   background-color: #febc68;
   height: 100%;
+  border-radius: 0 20px 20px 0;
 }
 #our-costumer #our-costumer-box #some-costumer-title h2 {
   margin-top: 35px;
   font-size: 35px;
 }
 #our-costumer #our-costumer-box #some-costumer-names {
+  overflow: hidden;
+  position: relative;
   width: 60%;
   float: right;
   height: 100%;
+  border-radius: 20px 0 0px 20px;
   background-color: white;
 }
-#our-costumer #our-costumer-box #some-costumer-names h6 {
-  margin: 70px 20px;
+#our-costumer #our-costumer-box #some-costumer-names .costumers {
+  border-radius: 15px;
+  background-color: rgba(252, 219, 140, 0.5019607843);
+  transition: all 0.5;
+  position: absolute;
+  left: 0;
   text-align: center;
   padding: 10px;
-  float: right;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  width: 25%;
-  height: 60px;
-  transition: all 0.5s;
+  width: 100px;
 }
-#our-costumer #our-costumer-box #some-costumer-names h6:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+#our-costumer #our-costumer-box #some-costumer-names .costumers:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 /*** middle them design ***/
@@ -255,6 +260,66 @@ body {
   font-family: b-yekan;
   font-size: 13px;
   margin: 10px 30px;
+}
+
+/** company-achievements **/
+#company-achievements {
+  height: 70px;
+  text-align: center;
+}
+#company-achievements #company-achievements-box {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -3px 15px, rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+  width: 850px;
+  left: calc(50% - 425px);
+  height: 140px;
+  border-radius: 25px;
+}
+#company-achievements #company-achievements-box #company-achievements-title {
+  border-radius: 0 20px 20px 0;
+  float: right;
+  width: 20%;
+  height: 100%;
+  background-color: #febc68;
+}
+#company-achievements #company-achievements-box #company-achievements-title h2 {
+  margin-top: 42px;
+}
+#company-achievements #company-achievements-box #company-achievements-done {
+  border-radius: 20px 0px 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+}
+#company-achievements #company-achievements-box #company-achievements-done .achievements {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 25%;
+  height: 90%;
+  margin: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#company-achievements #company-achievements-box #company-achievements-done .achievements h3 {
+  border-radius: 0 0 20px 20px;
+  order: 2;
+  font-family: b-yekan;
+  height: 40%;
+  background-color: rgba(252, 219, 140, 0.5019607843);
+  line-height: 20px;
+  padding: 5px;
+}
+#company-achievements #company-achievements-box #company-achievements-done .achievements h4 {
+  border-radius: 20px 20px 0 0;
+  order: 1;
+  font-family: b-yekan;
+  height: 60%;
+  font-weight: 700;
+  font-size: 60px;
+  background-color: rgba(65, 192, 181, 0.5019607843);
 }
 
 /** consulting section **/
