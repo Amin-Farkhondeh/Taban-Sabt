@@ -59,3 +59,39 @@ costumerMovingSection: {
     };
   }
 }
+
+achivementObserver : {
+  let target = document.getElementById("company-achievements-box");
+  let elements = document.getElementsByClassName("achivement-number");
+  let rect ;
+  let counter = 0;
+  document.addEventListener("scroll",()=>{
+    rect = target.getBoundingClientRect();
+    if(rect.bottom<=window.innerHeight){
+    let id=  setInterval(() => {
+      counter+=1;
+      if(counter<=12){
+        elements[0].innerHTML=counter;
+        elements[2].innerHTML=counter;
+        elements[1].innerHTML=counter;
+        elements[3].innerHTML=counter;
+      }
+      else if(counter<=21){
+        elements[1].innerHTML=counter;
+        elements[0].innerHTML=counter;
+        elements[3].innerHTML=counter;
+      }
+      else if(counter<=36){
+        elements[3].innerHTML=counter;
+        elements[1].innerHTML=counter;
+      }
+      else if(counter<=580){
+        counter +=5;
+        elements[3].innerHTML=counter;
+      }
+      else clearInterval(id);
+      }, 100);
+    }
+  })
+}
+

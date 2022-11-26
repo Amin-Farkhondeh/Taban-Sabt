@@ -161,18 +161,18 @@ body {
   #main-them-title {
     border-radius: 25px;
     margin: 180px 90px;
-    float: right;
+    
     h1 {
       font-size: 40px;
       font-family: $mainFont;
-      color: $OneColor;
-      text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+      color: white;
+      text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
     }
     h3 {
       font-family: $mainFont;
       font-size: 20px;
-      color: $threeColor;
-      text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+      color: white;
+      text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
     }
   }
 }
@@ -202,7 +202,7 @@ body {
       text-align: center;
       background-color: $fiveColor;
       height: 100%;
-      border-radius:0 20px 20px 0;
+      border-radius: 0 20px 20px 0;
     }
     #some-costumer-names {
       overflow: hidden;
@@ -210,7 +210,7 @@ body {
       width: 60%;
       float: right;
       height: 100%;
-      border-radius:20px 0 0px 20px;
+      border-radius: 20px 0 0px 20px;
       .costumers {
         border-radius: 15px;
         background-color: #fcdb8c80;
@@ -271,64 +271,65 @@ body {
 }
 
 /** company-achievements **/
-#company-achievements{
-    height: 70px;
-    text-align: center;
-    #company-achievements-box{
-        box-shadow: rgba(0, 0, 0, 0.35) 0px -3px 15px,rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        position: absolute;
-        width: 850px;
-        left: calc(50% - 425px);
-        height: 140px;
-        border-radius: 25px;
-        #company-achievements-title{
-            border-radius: 0 20px 20px 0;
-            float: right;
-            width: 20%;
-            height: 100%;
-            background-color: $fiveColor;
-            h2{
-                margin-top: 42px;
-            }
-        }
-        #company-achievements-done{
-            border-radius: 20px 0px 0px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 80%;
-            height: 100%;
-            background-color: white;
-            .achievements{
-                display: flex;
-                flex-direction: column;
-                border-radius: 20px;
-                width: 25%;
-                height: 90%;
-                margin: 15px;
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-                rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-                h3{
-                    border-radius: 0 0 20px 20px;
-                    order: 2;
-                    font-family: b-yekan;
-                    height: 40%;
-                    background-color: #fcdb8c80;
-                    line-height: 20px;
-                    padding: 5px;
-                }
-                h4{
-                    border-radius: 20px 20px 0 0;
-                    order: 1;
-                    font-family: b-yekan;
-                    height: 60%;
-                    font-weight: 700;
-                    font-size: 60px;
-                    background-color: #41c0b580;
-                }
-            }
-        }
+#company-achievements {
+  height: 70px;
+  text-align: center;
+  #company-achievements-box {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -3px 15px,
+      rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    width: 850px;
+    left: calc(50% - 425px);
+    height: 140px;
+    border-radius: 25px;
+    #company-achievements-title {
+      border-radius: 0 20px 20px 0;
+      float: right;
+      width: 20%;
+      height: 100%;
+      background-color: $fiveColor;
+      h2 {
+        margin-top: 42px;
+      }
     }
+    #company-achievements-done {
+      border-radius: 20px 0px 0px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 100%;
+      background-color: white;
+      .achievements {
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        width: 25%;
+        height: 90%;
+        margin: 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        h3 {
+          border-radius: 0 0 20px 20px;
+          order: 2;
+          font-family: b-yekan;
+          height: 40%;
+          background-color: #fcdb8c80;
+          line-height: 20px;
+          padding: 5px;
+        }
+        h4 {
+          border-radius: 20px 20px 0 0;
+          order: 1;
+          font-family: b-yekan;
+          height: 60%;
+          font-weight: 700;
+          font-size: 60px;
+          background-color: #41c0b580;
+        }
+      }
+    }
+  }
 }
 
 /** consulting section **/
