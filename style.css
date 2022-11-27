@@ -11,7 +11,7 @@
   font-family: vazir;
   src: url(fonts/vazir.ttf);
 }
-test {
+test, #contact-us #contact-form-box {
   border: 2px solid black;
 }
 
@@ -322,9 +322,51 @@ body {
 }
 
 /** consulting section **/
-#consult {
+#contact-us {
   background-image: url("pic/consultion-pic.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 740px;
+}
+#contact-us #corporation-icon, #contact-us #more-info-icon, #contact-us #change-icon {
+  display: block;
+  width: 110px;
+  margin: auto;
+  padding-top: 100px;
+  filter: drop-shadow(white 0px 5px 15px);
+}
+#contact-us #invite, #contact-us #more-info, #contact-us #company-register {
+  color: white;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+}
+#contact-us #invite h2, #contact-us #more-info h2, #contact-us #company-register h2 {
+  text-align: center;
+}
+#contact-us #invite h3, #contact-us #more-info h3, #contact-us #company-register h3 {
+  text-align: center;
+}
+#contact-us #change-icon {
+  padding-top: 40px;
+}
+#contact-us #company-register {
+  text-align: center;
+}
+#contact-us #more-info-icon {
+  padding-top: 40px;
+}
+#contact-us #more-info {
+  text-align: center;
+}
+#contact-us #more-info h4 > a {
+  font-family: b-yekan;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fcdb8c;
+}
+#contact-us #more-info h4 > a:hover {
+  color: #febc68;
+}
+#contact-us #contact-form-box {
+  display: inline-block;
+  margin-top: 150px;
 }/*# sourceMappingURL=style.css.map */

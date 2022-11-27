@@ -57,7 +57,8 @@
       <div id="main-them-title">
         <h1>ثبت، تغییرات، اخذ و ارتقاء رتبه شرکت های پیمانکاری و مشاور</h1>
         <h3>
-          انجام خدمات ثبت، تغییرات، اخذ و تمدید رتبه شرکت های پیمانکاری و مشاور <br />
+          انجام خدمات ثبت، تغییرات، اخذ و تمدید رتبه شرکت های پیمانکاری و مشاور
+          <br />
           در رشته تخصص های مرتبط در کوتاهترین زمان ممکن انجام میگیرد
         </h3>
       </div>
@@ -171,9 +172,77 @@
       </div>
     </div>
     <!--achievement ends-->
-     
+
     <!--consluting section-->
-    <div id="consult"></div>
+    <div id="contact-us">
+
+      <img id="corporation-icon" src="pic/corporation-icon.png" alt="آیکون همکاری">
+
+      <div id="invite">
+      <h2>دعوت به همکاری</h2>
+      <h3>از دارندگان مدرک کاردانی، کارشناسی و یا مدارک بالاتر جهت اخذ رتبه شرکت ها دعوت به همکاری میشود.</h3>
+     </div>
+      
+     <img id="change-icon" src="pic/change-icon.png" alt="آیکون تغییرات">
+
+     <div id="company-register">
+      <h2>درخواست تاسیس و تغییرات شرکت</h2>
+      <h3>اگر میخواهید شرکت خود را تاسیس کنید و یا تغییراتی برای شرکت خود تمهید نموده اید باید آن را به صورت رسمی به ثبت برسانید.</h3>
+     </div>
+
+     <img id="more-info-icon" src="pic/phone-icon.png" alt="آیکون تماس">
+
+     <div id="more-info">
+      <h4>جهت اطلاعات بیشتر با شماره  <a href="tel:+989151811375">09151811375</a> تماس حاصل فرمایید و یا فرم درخواست مشاوره در پایین همین صفحه را پر کنید تا همکاران ما در اسرع وقت با شما تماس حاصل فرمایند.</h4>
+     </div>
+    </div>
+
+    <!-- <div id="contact-form-box">
+      <form id="contact-form">
+        <input type="hidden" name="contact_number" />
+        <label>Name</label> 
+        <input type="text" name="user_name" /><br>
+        <label>Email</label>
+        <input type="email" name="user_email" /><br>
+        <label>Message</label>
+        <textarea name="message"></textarea><br>
+        <input type="submit" value="Send" />
+      </form>
+    </div> -->
+
   </body>
 </html>
+
+
+
 <script src="javascript.js"></script>
+<!-- <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+></script>
+<script type="text/javascript">
+  (function () {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init('w4844bOCqZVuhX1lX');
+  })();
+</script>
+<script type="text/javascript">
+  window.onload = function () {
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = (Math.random() * 100000) | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm("service_utnf44e", "contact_form", this).then(
+          function () {
+            console.log("SUCCESS!");
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+      });
+  };
+</script> -->
