@@ -369,4 +369,76 @@ body {
 #contact-us #contact-form-box {
   display: inline-block;
   margin-top: 150px;
+}
+
+/** contact form section **/
+#contact-form-box h2 {
+  border-top: 5px solid #1f9589;
+  text-align: center;
+  padding: 25px;
+}
+#contact-form-box #contact-form {
+  position: relative;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  margin: 0 auto 40px auto;
+  width: 300px;
+}
+#contact-form-box #contact-form #form-warning {
+  text-align: center;
+  width: 90%;
+  height: 30px;
+  margin: 6px;
+  background-color: rgba(255, 0, 0, 0.75);
+  position: absolute;
+  left: calc(5% - 6px);
+  border-radius: 25px;
+  visibility: hidden;
+}
+#contact-form-box label {
+  position: absolute;
+  font-size: 13px;
+  color: gray;
+  width: 100%;
+  right: 0;
+}
+#contact-form-box input, #contact-form-box label, #contact-form-box select {
+  margin-top: 28px;
+  transition: all 0.5s;
+  padding: 5px;
+}
+#contact-form-box input, #contact-form-box select {
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 5px;
+  border-radius: 10px;
+}
+#contact-form-box input:focus, #contact-form-box select:focus {
+  border: none;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#contact-form-box input:focus + label {
+  margin-top: 0;
+}
+#contact-form-box input:not(:-moz-placeholder-shown) + label {
+  margin-top: 0;
+}
+#contact-form-box input:not(:-ms-input-placeholder) + label {
+  margin-top: 0;
+}
+#contact-form-box input:not(:placeholder-shown) + label {
+  margin-top: 0;
+}
+#contact-form-box input[type=submit] {
+  margin: 15px;
+  padding: 5px 20px;
+}
+#contact-form-box input[type=submit]:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+#contact-form-box input[type=number]::-webkit-inner-spin-button {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

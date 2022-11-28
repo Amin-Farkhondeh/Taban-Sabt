@@ -196,19 +196,30 @@
       <h4>جهت اطلاعات بیشتر با شماره  <a href="tel:+989151811375">09151811375</a> تماس حاصل فرمایید و یا فرم درخواست مشاوره در پایین همین صفحه را پر کنید تا همکاران ما در اسرع وقت با شما تماس حاصل فرمایند.</h4>
      </div>
     </div>
+    <!--consluting section ends-->
 
-    <!-- <div id="contact-form-box">
+    <!--contact form start -->
+    <div id="contact-form-box">
+      <h2>فرم درخواست مشاوره</h2>
       <form id="contact-form">
-        <input type="hidden" name="contact_number" />
-        <label>Name</label> 
-        <input type="text" name="user_name" /><br>
-        <label>Email</label>
-        <input type="email" name="user_email" /><br>
-        <label>Message</label>
-        <textarea name="message"></textarea><br>
-        <input type="submit" value="Send" />
+        <input type="hidden" name="contact_number" minlength="3"/>
+        <input placeholder=" " id="user_name" type="text" name="user_name" required/>
+        <label id="one" for="user_name">نام و نام خانوادگی</label><br>
+        <input placeholder=" " id="email" type="email" name="user_email" required/>
+        <label for="email">ایمیل</label><br>
+        <input placeholder=" " id="phone" type="tel" pattern="[0-9]{11}"  required>
+        <label for="phone">شماره تماس</label><br>
+        <select name="subject" id="subject">
+          <option value="1">تاسیس شرکت</option>
+          <option value="2">درخواست تغییرات</option>
+          <option value="3">واگذاری مدرک</option>
+        </select><br>
+        <div id="form-warning"></div>
+        <input type="hidden" id="message" name="message"></input><br>
+        <input type="submit" value="ارسال" />
       </form>
-    </div> -->
+    </div>
+    <!--contact form ends -->
 
   </body>
 </html>
@@ -216,7 +227,7 @@
 
 
 <script src="javascript.js"></script>
-<!-- <script
+<script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
 ></script>
@@ -231,18 +242,42 @@
     document
       .getElementById("contact-form")
       .addEventListener("submit", function (event) {
+        let name = document.getElementById("user_name");
+        let email = document.getElementById("email");
+        let phone = document.getElementById("phone");
+        let subject = document.getElementById("subject");
+        let message = document.getElementById("message");
+        let warning = document.getElementById("form-warning");
+        let subjectR;
+        if(subject.value=="1"){subjectR="تاسیس شرکت"};
+        if(subject.value=="2"){subjectR="تغییرات شرکت"};
+        if(subject.value=="3"){subjectR="واگذاری مدرک"};
+
+        if(name.value!="" && email.value!="" && phone.value!=""){
+            message.value = ` پیغام از طرف ${name.value} `+` شماره تلفن  ${phone.value} ` + ` موضوع درخواستی : ${subjectR} `;
         event.preventDefault();
         // generate a five digit number for the contact_number variable
         this.contact_number.value = (Math.random() * 100000) | 0;
         // these IDs from the previous steps
         emailjs.sendForm("service_utnf44e", "contact_form", this).then(
           function () {
-            console.log("SUCCESS!");
+            warning.style.backgroundColor = "green";
+            warning.style.visibility = "visible";
+            warning.innerHTML = "پیغام با موفقیت ارسال شد";
+            name.value="";
+            email.value="";
+            phone.value="";
           },
           function (error) {
-            console.log("FAILED...", error);
+            warning.style.backgroundColor = "red";
+            warning.style.visibility = "visible";
+            warning.innerHTML = "ارسال پیام با مشکل مواجه شد !";
           }
         );
+          
+        }
+        else warning.value="لطفا مقادیر بالا را با دقت پر کنید!";
+
       });
   };
-</script> -->
+</script>
