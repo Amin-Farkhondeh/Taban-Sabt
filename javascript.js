@@ -95,9 +95,4 @@ achivementObserver : {
   })
 }
 
-fromController : {
-  let element = document.getElementById("subject");
-  console.log(typeof element.value)
-
-}
 

@@ -47,7 +47,6 @@
         <a href=""><div class="nav-bar-icon">گواهینامه ایزو</div></a>
         <a href=""><div class="nav-bar-icon">آئین نامه ها</div></a>
         <a href=""><div class="nav-bar-icon">محاسبات سازه</div></a>
-        <a href=""><div class="nav-bar-icon">درباره ما</div></a>
       </div>
     </div>
     <!--navigation bar end-->
@@ -172,7 +171,7 @@
       </div>
     </div>
     <!--achievement ends-->
-
+    
     <!--consluting section-->
     <div id="contact-us">
 
@@ -221,6 +220,25 @@
     </div>
     <!--contact form ends -->
 
+    <!-- company history start-->
+    <div id="history">
+      <div id="history-box">
+        <h3><b>شرکت تابان ثبت</b> با حدود ده سال سابقه در زمینه خدمات ثبت شرکت و اخذ رتبه شرکت ها و امور مرتبط به صدها شرکت سعی کرده با بالاترین دقت ، کوتاهترین زمان و قیمتی مناسب امورات محول شده را به نحو مطلوبی انجام و رضایت مشتریان عزیز را فرآهم آورد و تمام تلاش خود را در جهت رضایت حداکثری مشتریان معطوف داشته است. ​​​​​​​</h3>
+      </div>
+    </div>
+    <!-- company history ends-->
+
+    <!--Footer Start-->
+    <div id="footer">
+      <div id="contact-panel">
+
+      </div>
+      <img src="pic/main-icon.png" alt="آیکون شرکت">
+      <h2>تابان ثبت</h2>
+      <footer> تمامی حقوق سایت برای شرکت تابان ثبت محفوظ است &copy;</footer>
+    </div>
+    <!--Footer Ends-->
+
   </body>
 </html>
 
@@ -252,7 +270,8 @@
         if(subject.value=="1"){subjectR="تاسیس شرکت"};
         if(subject.value=="2"){subjectR="تغییرات شرکت"};
         if(subject.value=="3"){subjectR="واگذاری مدرک"};
-
+        warning.style.visibility = "visible";
+        warning.innerHTML =`<img src="pic/loading.gif" alt="ایکون لودینگ" width="100%">`;
         if(name.value!="" && email.value!="" && phone.value!=""){
             message.value = ` پیغام از طرف ${name.value} `+` شماره تلفن  ${phone.value} ` + ` موضوع درخواستی : ${subjectR} `;
         event.preventDefault();
@@ -261,7 +280,7 @@
         // these IDs from the previous steps
         emailjs.sendForm("service_utnf44e", "contact_form", this).then(
           function () {
-            warning.style.backgroundColor = "green";
+            warning.style.backgroundColor = "#46c236d2";
             warning.style.visibility = "visible";
             warning.innerHTML = "پیغام با موفقیت ارسال شد";
             name.value="";
@@ -269,7 +288,7 @@
             phone.value="";
           },
           function (error) {
-            warning.style.backgroundColor = "red";
+            warning.style.backgroundColor = "#fc3e3ed2";
             warning.style.visibility = "visible";
             warning.innerHTML = "ارسال پیام با مشکل مواجه شد !";
           }
