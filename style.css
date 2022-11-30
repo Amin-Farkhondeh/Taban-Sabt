@@ -449,6 +449,7 @@ body {
 #history {
   height: 50px;
   position: relative;
+  z-index: 2;
 }
 #history #history-box {
   background-color: #febc68;
@@ -467,8 +468,84 @@ body {
 
 /**footer**/
 #footer {
+  position: relative;
   height: 280px;
   background-color: #434247;
+}
+#footer #contact-panel {
+  position: absolute;
+  top: 80px;
+  right: 100px;
+}
+#footer #contact-panel #contact-panel-phone img {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  width: 60px;
+}
+#footer #contact-panel #contact-panel-phone a {
+  position: absolute;
+  text-align: center;
+  font-family: b-yekan;
+  text-decoration: none;
+  font-size: 16;
+  font-weight: 200;
+  color: #41c0b5;
+  right: 80px;
+  top: 10px;
+  transition: all 0.5s;
+}
+#footer #contact-panel #contact-panel-phone a:hover {
+  font-size: 20px;
+  color: #1f9589;
+}
+#footer #contact-panel #contact-panel-ring img {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  width: 55px;
+  top: 60px;
+}
+#footer #contact-panel #contact-panel-ring a {
+  position: absolute;
+  text-align: center;
+  font-family: b-yekan;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 200;
+  color: #41c0b5;
+  right: 60px;
+  top: 75px;
+  width: 150px;
+  transition: all 0.5s;
+}
+#footer #contact-panel #contact-panel-ring a:hover {
+  font-size: 20px;
+  color: #1f9589;
+}
+#footer #contact-panel #contact-panel-email img {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  width: 55px;
+  top: 120px;
+}
+#footer #contact-panel #contact-panel-email a {
+  position: absolute;
+  text-align: center;
+  font-family: b-yekan;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 200;
+  color: #41c0b5;
+  right: 70px;
+  top: 132px;
+  width: 150px;
+  transition: all 0.5s;
+}
+#footer #contact-panel #contact-panel-email a:hover {
+  font-size: 20px;
+  color: #1f9589;
 }
 #footer img {
   display: block;
@@ -494,4 +571,24 @@ body {
   text-align: center;
   font-size: 11px;
   margin: 10px;
+}
+#footer #address-panel {
+  position: absolute;
+  left: 100px;
+  width: 250px;
+  height: 120px;
+  top: 80px;
+}
+#footer #address-panel img {
+  padding: 0;
+  padding-bottom: 60px;
+  float: right;
+  width: 50px;
+}
+#footer #address-panel p {
+  padding: 10px;
+  font-family: b-yekan;
+  font-size: 16px;
+  color: #41c0b5;
+  text-align: justify;
 }/*# sourceMappingURL=style.css.map */

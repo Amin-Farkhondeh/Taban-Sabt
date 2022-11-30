@@ -459,6 +459,7 @@ input[type=number]::-webkit-inner-spin-button{
 #history{
 height: 50px;
 position: relative;
+z-index: 2;
 #history-box{
   background-color: #febc68;
   box-shadow: rgba(50, 50, 93, 0.25) 0px -6px 12px -2px, rgba(0, 0, 0, 0.3) 0px -3px 7px -3px;
@@ -477,8 +478,91 @@ font-weight: 300;
 
 /**footer**/
 #footer{
+  position: relative;
   height: 280px;
   background-color: $threeColor;
+  #contact-panel{
+    position: absolute;
+    top: 80px;;
+    right: 100px;
+    #contact-panel-phone{
+      img{
+        position: absolute;
+        right: 0;
+        padding: 5px;
+        width: 60px;
+      }
+      a{
+        position: absolute;
+        text-align: center;
+        font-family: b-yekan;
+        text-decoration: none;
+        font-size: 16;
+        font-weight: 200;
+        color : $twoColor;
+        right : 80px;
+        top: 10px;
+        transition: all 0.5s;
+        &:hover{
+          font-size: 20px;
+          color : $OneColor;
+        }
+      }
+    }
+    #contact-panel-ring{
+      img{
+        position: absolute;
+        right: 0;
+        padding: 5px;
+        width: 55px;
+        top: 60px;
+      }
+      a{
+        position: absolute;
+        text-align: center;
+        font-family: b-yekan;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 200;
+        color : $twoColor;
+        right : 60px;
+        top: 75px;
+        width: 150px;
+        transition: all 0.5s;
+        &:hover{
+          font-size: 20px;
+          color : $OneColor;
+        }
+      }
+    }
+    #contact-panel-email{
+      img{
+        position: absolute;
+        right: 0;
+        padding: 5px;
+        width: 55px;
+        top: 120px;
+      }
+      a{
+        position: absolute;
+        text-align: center;
+        font-family: b-yekan;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 200;
+        color : $twoColor;
+        right : 70px;
+        top: 132px;
+        width: 150px;
+        transition: all 0.5s;
+        &:hover{
+          font-size: 20px;
+          color : $OneColor;
+        }
+      }
+    }
+    
+  }
   img{
     display: block;
     width: 80px;
@@ -503,5 +587,26 @@ font-weight: 300;
     text-align: center;
     font-size: 11px;
     margin: 10px;
+  }
+
+  #address-panel{
+    position: absolute;
+    left : 100px;
+    width: 250px;
+    height: 120px;
+    top: 80px;
+    img{
+      padding:0;
+      padding-bottom: 60px;
+      float: right;
+      width: 50px;
+    }
+    p{
+      padding: 10px;
+      font-family: b-yekan;
+      font-size: 16px;
+      color : $twoColor;
+      text-align: justify;
+    }
   }
 }
