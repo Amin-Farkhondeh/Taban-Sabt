@@ -27,6 +27,13 @@ test {
   font-family: $mainFont;
   box-sizing: border-box;
 }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 body {
   position: relative;
 }
@@ -115,15 +122,84 @@ body {
   #nav-bar-icons {
     a {
       text-decoration: none;
+
     }
     float: right;
     .nav-bar-icon {
+      position: relative;
       float: right;
       font-family: $mainFont;
-      padding: 10px;
+      padding: 10px 18px;
       color: $fourColor;
       font-size: 14px;
       text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+      img{
+        position: absolute;
+        width: 20px;
+        top:16px;
+        margin:0 5px;
+        color:$fourColor;
+      }
+    }
+    #register-expand-more{
+      display: none;
+      background-color: white;
+      position: absolute;
+      top : 52px;
+      right : 113px;
+      width: 110px;
+      font-size: 13px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 5px;
+      .expand-icon{
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+        float: right;
+        padding: 10px 5px;
+        font-size: 14px;
+        color:$threeColor;
+        &:hover{
+          background-color: $OneColor;
+          color:white;
+        }
+      }
+    }
+    #icon2:hover+#register-expand-more{
+      display: block;
+    }
+    #register-expand-more:hover{
+      display: block;
+    }
+    #grade-expand-more{
+      display: none;
+      background-color: white;
+      position: absolute;
+      top : 52px;
+      right : 182px;
+      width: 180px;
+      font-size: 13px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 5px;
+      .expand-icon{
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+        float: right;
+        padding: 10px 5px;
+        font-size: 12px;
+        color:$threeColor;
+        &:hover{
+          background-color: $OneColor;
+          color:white;
+        }
+      }
+    }
+    #icon3:hover+#grade-expand-more{
+      display: block;
+    }
+    #grade-expand-more:hover{
+      display: block;
     }
     .nav-bar-icon:after,
     .nav-bar-icon:before {
@@ -139,7 +215,7 @@ body {
     }
     .nav-bar-icon:hover::after {
       backface-visibility: hidden;
-      border-color: $OneColor;
+      border-color: $threeColor;
       transition: width 350ms ease-in-out;
       width: 100%;
     }
@@ -601,7 +677,7 @@ font-weight: 300;
       float: right;
       width: 50px;
     }
-    p{
+    p,address{
       padding: 10px;
       font-family: b-yekan;
       font-size: 16px;
