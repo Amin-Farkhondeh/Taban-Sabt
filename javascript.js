@@ -1,3 +1,6 @@
+document.addEventListener("click",()=>{
+  console.log(window.innerWidth);
+})
 costumerMovingSection: {
   let costumersName = [
     "ایمان پیمان",

@@ -95,7 +95,9 @@ body {
     }
   }
 }
+
 /***** navigation bar *******/
+#responsive-nav-bar{display: none;}
 #nav-bar {
   z-index: 2;
   position: sticky;
@@ -104,6 +106,9 @@ body {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: 100%;
   background-color: $twoColor;
+  #menu{
+    display: none;
+  }
   #nav-bar-left-side {
     float: left;
     margin-left: 20px;
@@ -686,3 +691,115 @@ font-weight: 300;
     }
   }
 }
+
+/** ipad resposive design **/
+@media only screen and (max-width:1205px) {
+  #nav-bar {
+    #nav-bar-left-side {
+      img {
+        width: 30px;
+        margin-top: 8px;
+      }
+      h4 {
+        display: none;
+      }
+    }
+    #nav-bar-icons {
+      .nav-bar-icon {
+        font-size: 11px;
+      }
+      #register-expand-more{
+        top:46px;
+        right : 88px;
+        .expand-icon{
+          font-size: 11px;
+        }
+      }
+      #grade-expand-more{
+        top:46px;
+        right:145px;
+        }
+      }
+    }
+  }
+
+//** mobile responsive **//
+  @media only screen and (max-width:970px){
+
+    /** top head responsive **/
+    #top-head {
+      height: 100px;
+      background-color: $threeColor;
+      position: relative;
+      /*** راه های ارتباطی***/
+      #social-contact {
+        height: 40px;
+        p {
+          width: 80px;
+          position: absolute;
+          display: inline-block;
+          color: white;
+          top: 2px;
+          left: calc(50% - 40px);
+          font-family: $titleFont;
+          font-size: 10px;
+        }
+        #social-contact-box{
+          position: relative;
+          height: 25px;
+          width: 100px;
+          right : calc(50% - 51px);
+          top: 15px;
+        }
+        }
+        #call-contact {
+          margin-left:20px;
+          text-align: center;
+          #trash{
+            display: none;
+          }
+          *{
+            display: block;
+            font-size: 10px;
+          }
+        }
+      }
+  
+    /** nav bar responsive **/
+    #nav-bar {
+      height: 35px;
+      #menu{
+        transition: all 0.5s;
+        display: block;
+        background-image: url('pic/menu-icon.png');
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        border:none;
+        margin : 5px;
+        float: right;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        &:hover{
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          cursor: pointer;
+        }
+      }
+      #nav-bar-left-side{
+        float: left;
+        margin-top:4px;
+        h4{
+          display: block;
+          margin-top :3px;
+        }
+        img{
+          margin:0;
+          display: block;
+        }
+      }
+      #nav-bar-icons{
+        display: none;
+      }
+    }
+
+  }
+
