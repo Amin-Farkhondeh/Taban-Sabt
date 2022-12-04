@@ -1,6 +1,3 @@
-document.addEventListener("click",()=>{
-  console.log(window.innerWidth);
-})
 costumerMovingSection: {
   let costumersName = [
     "ایمان پیمان",
@@ -63,39 +60,86 @@ costumerMovingSection: {
   }
 }
 
-achivementObserver : {
+achivementObserver: {
   let target = document.getElementById("company-achievements-box");
   let elements = document.getElementsByClassName("achivement-number");
-  let rect ;
+  let rect;
   let counter = 0;
-  document.addEventListener("scroll",()=>{
+  document.addEventListener("scroll", () => {
     rect = target.getBoundingClientRect();
-    if(rect.bottom<=window.innerHeight){
-    let id=  setInterval(() => {
-      counter+=1;
-      if(counter<=12){
-        elements[0].innerHTML=counter;
-        elements[2].innerHTML=counter;
-        elements[1].innerHTML=counter;
-        elements[3].innerHTML=counter;
-      }
-      else if(counter<=21){
-        elements[1].innerHTML=counter;
-        elements[0].innerHTML=counter;
-        elements[3].innerHTML=counter;
-      }
-      else if(counter<=36){
-        elements[3].innerHTML=counter;
-        elements[1].innerHTML=counter;
-      }
-      else if(counter<=580){
-        counter +=5;
-        elements[3].innerHTML=counter;
-      }
-      else clearInterval(id);
+    if (rect.bottom <= window.innerHeight) {
+      let id = setInterval(() => {
+        counter += 1;
+        if (counter <= 12) {
+          elements[0].innerHTML = counter;
+          elements[2].innerHTML = counter;
+          elements[1].innerHTML = counter;
+          elements[3].innerHTML = counter;
+        } else if (counter <= 21) {
+          elements[1].innerHTML = counter;
+          elements[0].innerHTML = counter;
+          elements[3].innerHTML = counter;
+        } else if (counter <= 36) {
+          elements[3].innerHTML = counter;
+          elements[1].innerHTML = counter;
+        } else if (counter <= 580) {
+          counter += 5;
+          elements[3].innerHTML = counter;
+        } else clearInterval(id);
       }, 100);
     }
-  })
+  });
 }
 
+navbarClicks: {
+  let menu = document.getElementById("menu");
+  let responsiveNavbar = document.getElementById("responsive-nav-bar");
+  let isMenuOpen = false;
+  menu.onclick = () => {
+    if (!isMenuOpen) {
+      responsiveNavbar.style.display = "block";
+      isMenuOpen = true;
+      menu.style.backgroundImage = "url('pic/close-icon.png')";
+    } else {
+      responsiveNavbar.style.display = "none";
+      isMenuOpen = false;
+      menu.style.backgroundImage = "url('pic/menu-icon.png')";
+    }
+  };
 
+  let arrow1 = document.getElementById("icon1-img");
+  let isRegisterExpand = false;
+  let registerIcon = document.getElementById("responsive-icon1");
+  let registerExpand = document.getElementById(
+    "responsive-register-expand-more"
+  );
+  registerIcon.onclick = () => {
+    if (!isRegisterExpand) {
+      registerExpand.style.display = "block";
+      registerExpand.style.position = "relative";
+      arrow1.style.transform = "rotate(0deg)";
+      isRegisterExpand = true;
+    } else {
+      arrow1.style.transform = "rotate(90deg)";
+      registerExpand.style.display = "none";
+      isRegisterExpand = false;
+    }
+  };
+
+  let arrow2 = document.getElementById("icon2-img");
+  let isRegisterExpand2 = false;
+  let registerIcon2 = document.getElementById("responsive-icon2");
+  let registerExpand2 = document.getElementById("responsive-grade-expand-more");
+  registerIcon2.onclick = () => {
+    if (!isRegisterExpand2) {
+      registerExpand2.style.display = "block";
+      registerExpand2.style.position = "relative";
+      arrow2.style.transform = "rotate(0deg)";
+      isRegisterExpand2 = true;
+    } else {
+      arrow2.style.transform = "rotate(90deg)";
+      registerExpand2.style.display = "none";
+      isRegisterExpand2 = false;
+    }
+  };
+}

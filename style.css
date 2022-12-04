@@ -93,6 +93,9 @@ body {
 #nav-bar {
   z-index: 2;
   position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
   position: sticky;
   top: 0;
   float: right;
@@ -484,18 +487,22 @@ body {
   width: 100%;
   right: 0;
 }
-#contact-form-box input, #contact-form-box label, #contact-form-box select {
+#contact-form-box input,
+#contact-form-box label,
+#contact-form-box select {
   margin-top: 28px;
   transition: all 0.5s;
   padding: 5px;
 }
-#contact-form-box input, #contact-form-box select {
+#contact-form-box input,
+#contact-form-box select {
   border: none;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding: 5px;
   border-radius: 10px;
 }
-#contact-form-box input:focus, #contact-form-box select:focus {
+#contact-form-box input:focus,
+#contact-form-box select:focus {
   border: none;
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -528,7 +535,7 @@ body {
 #history {
   height: 50px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 #history #history-box {
   background-color: #febc68;
@@ -664,7 +671,8 @@ body {
   float: right;
   width: 50px;
 }
-#footer #address-panel p, #footer #address-panel address {
+#footer #address-panel p,
+#footer #address-panel address {
   padding: 10px;
   font-family: b-yekan;
   font-size: 16px;
@@ -696,8 +704,14 @@ body {
     right: 145px;
   }
 }
+/** a bug that prevent responsive nav bar opened when u expand its icons **/
+@media only screen and (min-width: 970px) {
+  #responsive-nav-bar {
+    display: none !important;
+  }
+}
 @media only screen and (max-width: 970px) {
-  /** top head responsive **/
+  /** original top head redesigned for mobile **/
   #top-head {
     height: 100px;
     background-color: #434247;
@@ -735,11 +749,13 @@ body {
     display: block;
     font-size: 10px;
   }
-  /** nav bar responsive **/
+  /** original nav bar redesigned for mobile **/
   #nav-bar {
+    z-index: 2;
     height: 35px;
   }
   #nav-bar #menu {
+    background-color: transparent;
     transition: all 0.5s;
     display: block;
     background-image: url("pic/menu-icon.png");
@@ -769,5 +785,184 @@ body {
   }
   #nav-bar #nav-bar-icons {
     display: none;
+  }
+  /** NEW responsive navbar that will open on menu click**/
+  #responsive-nav-bar {
+    display: none;
+    position: absolute;
+    top: 35px;
+    width: 160px;
+    background-color: #434247;
+    float: right;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  #responsive-nav-bar a {
+    text-decoration: none;
+    font-size: 10px;
+  }
+  #responsive-nav-bar .responsive-nav-bar-icon {
+    color: #fcdb8c;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    float: right;
+    font-family: iran-sans;
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+  #responsive-nav-bar .responsive-nav-bar-icon img {
+    position: absolute;
+    width: 20px;
+    top: 10px;
+    margin: 0 5px;
+    transform: rotate(90deg);
+  }
+  #responsive-nav-bar .responsive-nav-bar-icon:hover {
+    background-color: white;
+    color: #434247;
+  }
+  #responsive-nav-bar #responsive-register-expand-more {
+    text-align: center;
+    display: none;
+    background-color: #5c5a66;
+    position: absolute;
+    font-size: 11px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  #responsive-nav-bar #responsive-register-expand-more .responsive-expand-icon {
+    text-align: center;
+    width: 100%;
+    float: right;
+    padding: 10px 5px;
+    font-size: 11px;
+    color: #fcdb8c;
+    background-color: #5c5a66;
+  }
+  #responsive-nav-bar #responsive-register-expand-more .responsive-expand-icon:hover {
+    background-color: white;
+    color: #434247;
+  }
+  #responsive-nav-bar #responsive-register-expand-more:hover {
+    display: block;
+    position: relative;
+  }
+  #responsive-nav-bar #responsive-grade-expand-more {
+    display: none;
+    position: absolute;
+    font-size: 11px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  #responsive-nav-bar #responsive-grade-expand-more .responsive-expand-icon {
+    text-align: center;
+    width: 100%;
+    float: right;
+    padding: 10px 5px;
+    font-size: 11px;
+    color: #fcdb8c;
+    background-color: #5c5a66;
+  }
+  #responsive-nav-bar #responsive-grade-expand-more .responsive-expand-icon:hover {
+    background-color: white;
+    color: #434247;
+  }
+  #responsive-nav-bar #icon3:hover + #grade-expand-more {
+    display: block;
+    position: relative;
+  }
+  #responsive-nav-bar #grade-expand-more:hover {
+    display: block;
+  }
+  /** main them redesigned for responsive mobile **/
+  #main-them {
+    height: 400px;
+  }
+  #main-them #main-them-title {
+    margin-top: 100px;
+  }
+  #main-them #main-them-title h1 {
+    font-size: 16px;
+    font-weight: 200;
+  }
+  #main-them #main-them-title h3 {
+    font-size: 12px;
+    font-weight: 100;
+  }
+  /** remove our costumer section for better responsebility on mobile **/
+  #our-costumer {
+    display: none;
+  }
+  /** remove company achivement section for better responsebility on mobile **/
+  #company-achievements {
+    display: none;
+  }
+  /** redesign consulting section for mobile responsebelity **/
+  #contact-us {
+    height: 740px;
+  }
+  #contact-us #corporation-icon, #contact-us #change-icon, #contact-us #more-info-icon {
+    display: block;
+    width: 80px;
+    margin: auto;
+    padding-top: 30px;
+    filter: drop-shadow(white 0px 5px 15px);
+  }
+  #contact-us #invite h2, #contact-us #company-register h2, #contact-us #more-info h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+  }
+  #contact-us #invite h3, #contact-us #company-register h3, #contact-us #more-info h3 {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 100;
+  }
+  #contact-us #change-icon {
+    padding-top: 40px;
+  }
+  #contact-us #company-register {
+    text-align: center;
+  }
+  #contact-us #more-info-icon {
+    padding-top: 40px;
+  }
+  #contact-us #more-info {
+    text-align: center;
+  }
+  #contact-us #more-info h4 {
+    font-size: 13px;
+    font-weight: 100;
+  }
+  #contact-us #more-info h4 a {
+    font-size: 13px;
+  }
+  /** history responsive redesign **/
+  #history #history-box {
+    width: 260px;
+    left: calc(50% - 130px);
+    padding: 10px;
+  }
+  #history #history-box h3 {
+    text-align: justify;
+    font-size: 11px;
+  }
+  /** footer responsive redesigned **/
+  #footer {
+    height: 580px;
+  }
+  #footer #footer-icon {
+    width: 50px;
+    padding-top: 120px;
+  }
+  #footer #contact-panel {
+    border: 1px solid black;
+    width: 200px;
+    top: 430px;
+    right: calc(50% - 100px);
+    margin-top: -60px;
+  }
+  #footer #address-panel {
+    display: block;
+    position: static;
+    margin: auto;
   }
 }/*# sourceMappingURL=style.css.map */
