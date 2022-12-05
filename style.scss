@@ -993,17 +993,19 @@ body {
   #footer {
     height: 580px;
     #footer-icon {
-      width: 50px;
+      width: 45px;
       padding-top: 120px;
     }
     #contact-panel {
-      border: 1px solid black;
       width: 200px;
-      top: 430px;
+      top: 450px;
       right: calc(50% - 100px);
-      margin-top: -60px;
+      margin: -60px 0 0 0;
     }
     #address-panel {
+      img{
+        width: 50px;
+      }
       display: block;
       position: static;
       margin: auto;

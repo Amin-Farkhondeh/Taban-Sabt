@@ -950,19 +950,21 @@ body {
     height: 580px;
   }
   #footer #footer-icon {
-    width: 50px;
+    width: 45px;
     padding-top: 120px;
   }
   #footer #contact-panel {
-    border: 1px solid black;
     width: 200px;
-    top: 430px;
+    top: 450px;
     right: calc(50% - 100px);
-    margin-top: -60px;
+    margin: -60px 0 0 0;
   }
   #footer #address-panel {
     display: block;
     position: static;
     margin: auto;
+  }
+  #footer #address-panel img {
+    width: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
