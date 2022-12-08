@@ -35,7 +35,6 @@ costumerMovingSection: {
     rndTop = Math.floor(Math.random() * 180);
     newCostumer.style.top = rndTop + "px";
     moveForward(newCostumer);
-    moveUpDown(newCostumer, rndTop);
   }, 500);
 
   function moveForward(element, left = 0) {
