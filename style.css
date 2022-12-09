@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: b-yekan;
   src: url(fonts/Yekan.ttf);
@@ -11,15 +15,26 @@
   font-family: vazir;
   src: url(fonts/vazir.ttf);
 }
-test {
-  border: 2px solid black;
-}
-
 * {
   margin: 0;
   padding: 0;
   font-family: iran-sans;
   box-sizing: border-box;
+}
+
+#go-top {
+  display: none;
+  z-index: 3;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 48px;
+  height: 48px;
+  background-color: coral;
+  border-radius: 50%;
+}
+#go-top img {
+  transform: rotate(180deg);
 }
 
 .material-symbols-outlined {

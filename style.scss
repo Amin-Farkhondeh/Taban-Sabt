@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: b-yekan;
   src: url(fonts/Yekan.ttf);
@@ -18,14 +21,25 @@ $fiveColor: #febc68;
 $sixColor: #fcdb8c;
 $mainFont: iran-sans;
 $titleFont: vazir;
-test {
-  border: 2px solid black;
-}
 * {
   margin: 0;
   padding: 0;
   font-family: $mainFont;
   box-sizing: border-box;
+}
+#go-top{
+  display: none;
+  z-index: 3;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 48px;
+  height: 48px;
+  background-color: coral;
+  border-radius: 50%;
+  img{
+    transform: rotate(180deg);
+  }
 }
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;

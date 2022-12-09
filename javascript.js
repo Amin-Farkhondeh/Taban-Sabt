@@ -59,6 +59,21 @@ costumerMovingSection: {
   }
 }
 
+showTopHeadIcon : {
+let target2 = document.getElementById("our-costumer");
+let rect2;
+document.addEventListener("scroll", () => {
+  rect2 = target.getBoundingClientRect();
+  if (rect2.bottom <= window.innerHeight) {
+    document.getElementById("go-top").style.display = "block";
+  }
+  if (rect.bottom > window.innerHeight) {
+    document.getElementById("go-top").style.display = "none";
+  }
+}
+)
+}
+
 achivementObserver: {
   let target = document.getElementById("company-achievements-box");
   let elements = document.getElementsByClassName("achivement-number");
@@ -67,6 +82,7 @@ achivementObserver: {
   document.addEventListener("scroll", () => {
     rect = target.getBoundingClientRect();
     if (rect.bottom <= window.innerHeight) {
+      document.getElementById("go-top").style.display = "block";
       let id = setInterval(() => {
         counter += 1;
         if (counter <= 12) {
@@ -86,6 +102,9 @@ achivementObserver: {
           elements[3].innerHTML = counter;
         } else clearInterval(id);
       }, 100);
+    }
+    if (rect.bottom > window.innerHeight) {
+      document.getElementById("go-top").style.display = "none";
     }
   });
 }
