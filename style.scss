@@ -267,7 +267,7 @@ body {
       color: white;
       text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
     }
-    h2 {
+    p {
       font-family: $mainFont;
       font-size: 20px;
       color: white;
@@ -292,9 +292,13 @@ body {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
     #some-costumer-title {
-      h2 {
-        margin-top: 35px;
+      span {
+        display: block;
         font-size: 35px;
+        font-weight: 500;
+        &:nth-child(1){
+          margin-top: 35px;
+        }
       }
       width: 40%;
       float: right;
@@ -359,6 +363,11 @@ body {
       font-size: 13px;
       margin: 10px 30px;
       font-weight: 600;
+      >a{
+        text-decoration: none;
+        font-family: b-yekan;
+        color: #2e8b84;
+      }
     }
     border-radius: 25px;
     overflow: hidden;
@@ -367,7 +376,7 @@ body {
     margin: 40px 10px;
     min-width: 320px;
     max-width: 320px;
-    height: 650px;
+    height: 670px;
   }
 }
 
