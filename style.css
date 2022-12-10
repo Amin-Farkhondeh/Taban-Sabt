@@ -392,8 +392,11 @@ body {
   height: 100%;
   background-color: #febc68;
 }
-#company-achievements #company-achievements-box #company-achievements-title h2 {
+#company-achievements #company-achievements-box #company-achievements-title span {
+  display: block;
   margin-top: 42px;
+  font-size: 28px;
+  font-weight: 600;
 }
 #company-achievements #company-achievements-box #company-achievements-done {
   border-radius: 20px 0px 0px 20px;
@@ -413,7 +416,7 @@ body {
   margin: 15px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-#company-achievements #company-achievements-box #company-achievements-done .achievements h3 {
+#company-achievements #company-achievements-box #company-achievements-done .achievements .achive-types {
   border-radius: 0 0 20px 20px;
   order: 2;
   font-family: b-yekan;
@@ -421,8 +424,10 @@ body {
   background-color: rgba(252, 219, 140, 0.5019607843);
   line-height: 20px;
   padding: 5px;
+  font-weight: 600;
 }
-#company-achievements #company-achievements-box #company-achievements-done .achievements h4 {
+#company-achievements #company-achievements-box #company-achievements-done .achievements .achive-num-style {
+  display: block;
   border-radius: 20px 20px 0 0;
   order: 1;
   font-family: b-yekan;
@@ -485,13 +490,15 @@ body {
 #contact-form-box {
   margin-top: -50px;
 }
-#contact-form-box h2 {
+#contact-form-box span {
+  display: block;
   background-color: white;
   width: 300px;
   text-align: center;
   margin: 10px auto;
   padding: 15px;
   border-radius: 20px;
+  font-weight: 600;
 }
 #contact-form-box #contact-form {
   position: relative;
