@@ -1,0 +1,618 @@
+html{
+    scroll-behavior: smooth;
+  }
+  @font-face {
+    font-family: b-yekan;
+    src: url(fonts/Yekan.ttf);
+  }
+  @font-face {
+    font-family: iran-sans;
+    src: url(fonts/iran-sans.ttf);
+  }
+  @font-face {
+    font-family: vazir;
+    src: url(fonts/vazir.ttf);
+  }
+  $OneColor: #1f9589;
+  $twoColor: #41c0b5;
+  $threeColor: #434247;
+  $fourColor: #5c5a66;
+  $fiveColor: #febc68;
+  $sixColor: #fcdb8c;
+  $mainFont: iran-sans;
+  $titleFont: vazir;
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: $mainFont;
+    box-sizing: border-box;
+  }
+  #go-top{
+    display: none;
+    z-index: 3;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 48px;
+    height: 48px;
+    background-color: coral;
+    border-radius: 50%;
+    img{
+      transform: rotate(180deg);
+    }
+  }
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  }
+
+  /**************************** head **************************/
+  #top-head {
+    height: 25px;
+    background-color: $threeColor;
+    position: relative;
+    /*** راه های ارتباطی***/
+    #social-contact {
+      p {
+        position: absolute;
+        display: inline-block;
+        color: white;
+        top: 2px;
+        left: 90px;
+        font-family: $titleFont;
+        font-size: 13px;
+      }
+      img {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      #instagram-icon {
+        width: 25px;
+        position: absolute;
+        left: 20px;
+        transition: all 0.5s;
+        &:hover {
+          transform: rotate(360deg);
+        }
+      }
+      #telegram-icon {
+        position: absolute;
+        left: 55px;
+        transition: all 0.5s;
+        &:hover {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    /*** همین حالا تماس بگیرید ***/
+    #call-contact {
+      margin-right: 20px;
+      font-size: 13px;
+      right: 20px;
+      span {
+        color: white;
+      }
+      a {
+        text-decoration: none;
+        color: $twoColor;
+        font-family: $titleFont;
+        font-size: 13px;
+        &:hover {
+          color: $OneColor;
+        }
+      }
+    }
+  }
+  
+  /***** navigation bar *******/
+  #responsive-nav-bar {
+    display: none;
+  }
+  #nav-bar {
+    z-index: 2;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    top: 0;
+    float: right;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 100%;
+    background-color: $twoColor;
+    #menu {
+      display: none;
+    }
+    #nav-bar-left-side {
+      float: left;
+      margin-left: 20px;
+      img {
+        float: left;
+        margin: 2px;
+        width: 50px;
+      }
+      company {
+        font-family: $titleFont;
+        font-size: 13px;
+        float: left;
+        margin: 15px 0 15px 5px;
+        color: $threeColor;
+        font-weight: 700;
+      }
+    }
+    #nav-bar-icons {
+      a {
+        text-decoration: none;
+      }
+      float: right;
+      .nav-bar-icon {
+        position: relative;
+        float: right;
+        font-family: $mainFont;
+        padding: 10px 18px;
+        color: $fourColor;
+        font-size: 14px;
+        text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+        img {
+          position: absolute;
+          width: 20px;
+          top: 16px;
+          margin: 0 5px;
+          color: $fourColor;
+        }
+      }
+      #register-expand-more {
+        display: none;
+        background-color: white;
+        position: absolute;
+        top: 52px;
+        right: 113px;
+        width: 110px;
+        font-size: 13px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 5px;
+        .expand-icon {
+          border-radius: 5px;
+          text-align: center;
+          width: 100%;
+          float: right;
+          padding: 10px 5px;
+          font-size: 14px;
+          color: $threeColor;
+          &:hover {
+            background-color: $OneColor;
+            color: white;
+          }
+        }
+      }
+      #icon2:hover + #register-expand-more {
+        display: block;
+      }
+      #register-expand-more:hover {
+        display: block;
+      }
+      #grade-expand-more {
+        display: none;
+        background-color: white;
+        position: absolute;
+        top: 52px;
+        right: 182px;
+        width: 180px;
+        font-size: 13px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 5px;
+        .expand-icon {
+          border-radius: 5px;
+          text-align: center;
+          width: 100%;
+          float: right;
+          padding: 10px 5px;
+          font-size: 12px;
+          color: $threeColor;
+          &:hover {
+            background-color: $OneColor;
+            color: white;
+          }
+        }
+      }
+      #icon3:hover + #grade-expand-more {
+        display: block;
+      }
+      #grade-expand-more:hover {
+        display: block;
+      }
+      .nav-bar-icon:after,
+      .nav-bar-icon:before {
+        backface-visibility: hidden;
+        border: 2px solid rgba(#fff, 0);
+        bottom: -10px;
+        content: " ";
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        transition: all 280ms ease-in-out;
+        width: 0;
+      }
+      .nav-bar-icon:hover::after {
+        backface-visibility: hidden;
+        border-color: $threeColor;
+        transition: width 350ms ease-in-out;
+        width: 100%;
+      }
+      .nav-bar-icon:hover:before {
+        bottom: auto;
+        top: 0;
+        width: 70%;
+      }
+    }
+  }
+
+  /*** main them design ***/
+  #article-them{
+    height: 250px;
+  }
+  
+  /**footer**/
+  #footer {
+    position: relative;
+    height: 280px;
+    background-color: $threeColor;
+    #contact-panel {
+      position: absolute;
+      top: 80px;
+      right: 100px;
+      #contact-panel-phone {
+        img {
+          position: absolute;
+          right: 0;
+          padding: 5px;
+          width: 60px;
+        }
+        a {
+          position: absolute;
+          text-align: center;
+          font-family: b-yekan;
+          text-decoration: none;
+          font-size: 16;
+          font-weight: 200;
+          color: $twoColor;
+          right: 80px;
+          top: 10px;
+          transition: all 0.5s;
+          &:hover {
+            font-size: 20px;
+            color: $OneColor;
+          }
+        }
+      }
+      #contact-panel-ring {
+        img {
+          position: absolute;
+          right: 0;
+          padding: 5px;
+          width: 55px;
+          top: 60px;
+        }
+        a {
+          position: absolute;
+          text-align: center;
+          font-family: b-yekan;
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 200;
+          color: $twoColor;
+          right: 60px;
+          top: 75px;
+          width: 150px;
+          transition: all 0.5s;
+          &:hover {
+            font-size: 20px;
+            color: $OneColor;
+          }
+        }
+      }
+      #contact-panel-email {
+        img {
+          position: absolute;
+          right: 0;
+          padding: 5px;
+          width: 55px;
+          top: 120px;
+        }
+        a {
+          position: absolute;
+          text-align: center;
+          font-family: b-yekan;
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 200;
+          color: $twoColor;
+          right: 70px;
+          top: 132px;
+          width: 150px;
+          transition: all 0.5s;
+          &:hover {
+            font-size: 20px;
+            color: $OneColor;
+          }
+        }
+      }
+    }
+    img {
+      display: block;
+      width: 80px;
+      margin: auto;
+      padding-top: 100px;
+    }
+    company {
+      display: block;
+      text-align: center;
+      color: $fiveColor;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  
+    footer {
+      text-align: center;
+      font-size: 11px;
+      margin: 10px;
+    }
+  
+    #address-panel {
+      position: absolute;
+      left: 100px;
+      width: 250px;
+      height: 120px;
+      top: 80px;
+      img {
+        padding: 0;
+        padding-bottom: 60px;
+        float: right;
+        width: 50px;
+      }
+      p,
+      address {
+        padding: 10px;
+        font-family: b-yekan;
+        font-size: 16px;
+        color: $twoColor;
+        text-align: justify;
+      }
+    }
+  }
+  
+  /** ipad resposive design **/
+  @media only screen and (max-width: 1205px) {
+    #nav-bar {
+      #nav-bar-left-side {
+        img {
+          width: 30px;
+          margin-top: 8px;
+        }
+        company {
+          display: none;
+        }
+      }
+      #nav-bar-icons {
+        .nav-bar-icon {
+          font-size: 11px;
+        }
+        #register-expand-more {
+          top: 46px;
+          right: 88px;
+          .expand-icon {
+            font-size: 11px;
+          }
+        }
+        #grade-expand-more {
+          top: 46px;
+          right: 145px;
+        }
+      }
+    }
+  }
+  
+  /** a bug that prevent responsive nav bar opened when u expand its icons **/
+  @media only screen and (min-width: 970px) {
+    #responsive-nav-bar {
+      display: none !important;
+    }
+  }
+  
+  //** mobile responsive **//
+  @media only screen and (max-width: 970px) {
+    /** original top head redesigned for mobile **/
+    #top-head {
+      height: 100px;
+      background-color: $threeColor;
+      position: relative;
+      /*** راه های ارتباطی***/
+      #social-contact {
+        height: 40px;
+        p {
+          width: 80px;
+          position: absolute;
+          display: inline-block;
+          color: white;
+          top: 2px;
+          left: calc(50% - 40px);
+          font-family: $titleFont;
+          font-size: 10px;
+        }
+        #social-contact-box {
+          position: relative;
+          height: 25px;
+          width: 100px;
+          right: calc(50% - 51px);
+          top: 15px;
+        }
+      }
+      #call-contact {
+        margin-left: 20px;
+        text-align: center;
+        #trash {
+          display: none;
+        }
+        * {
+          display: block;
+          font-size: 10px;
+        }
+      }
+    }
+  
+    /** original nav bar redesigned for mobile **/
+    #nav-bar {
+      z-index: 2;
+      height: 35px;
+      #menu {
+        background-color: transparent;
+        transition: all 0.5s;
+        display: block;
+        background-image: url("pic/menu-icon.png");
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        border: none;
+        margin: 5px;
+        float: right;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+          rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          cursor: pointer;
+        }
+      }
+      #nav-bar-left-side {
+        float: left;
+        margin-top: 4px;
+        company {
+          display: block;
+          margin-top: 3px;
+        }
+        img {
+          margin: 0;
+          display: block;
+        }
+      }
+      #nav-bar-icons {
+        display: none;
+      }
+    }
+  
+    /** NEW responsive navbar that will open on menu click**/
+    #responsive-nav-bar {
+      display: none;
+      position: absolute;
+      top: 35px;
+      width: 160px;
+      background-color: $threeColor;
+      float: right;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      a {
+        text-decoration: none;
+        font-size: 10px;
+      }
+      .responsive-nav-bar-icon {
+        color: $sixColor;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        float: right;
+        font-family: $mainFont;
+        padding: 10px 18px;
+        font-size: 12px;
+        img {
+          position: absolute;
+          width: 20px;
+          top: 10px;
+          margin: 0 5px;
+          transform: rotate(90deg);
+        }
+        &:hover {
+          background-color: white;
+          color: $threeColor;
+        }
+      }
+      #responsive-register-expand-more {
+        text-align: center;
+        display: none;
+        background-color: $fourColor;
+        position: absolute;
+        font-size: 11px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        .responsive-expand-icon {
+          text-align: center;
+          width: 100%;
+          float: right;
+          padding: 10px 5px;
+          font-size: 11px;
+          color: $sixColor;
+          background-color: $fourColor;
+          &:hover {
+            background-color: white;
+            color: $threeColor;
+          }
+        }
+      }
+      #responsive-register-expand-more:hover {
+        display: block;
+        position: relative;
+      }
+      #responsive-grade-expand-more {
+        display: none;
+        position: absolute;
+        font-size: 11px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        .responsive-expand-icon {
+          text-align: center;
+          width: 100%;
+          float: right;
+          padding: 10px 5px;
+          font-size: 11px;
+          color: $sixColor;
+          background-color: $fourColor;
+          &:hover {
+            background-color: white;
+            color: $threeColor;
+          }
+        }
+      }
+      #icon3:hover + #grade-expand-more {
+        display: block;
+        position: relative;
+      }
+      #grade-expand-more:hover {
+        display: block;
+      }
+      #responsive-icon1,#responsive-icon2{
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  
+    /** footer responsive redesigned **/
+    #footer {
+      height: 580px;
+      #footer-icon {
+        width: 45px;
+        padding-top: 120px;
+      }
+      #contact-panel {
+        width: 200px;
+        top: 450px;
+        right: calc(50% - 100px);
+        margin: -60px 0 0 0;
+      }
+      #address-panel {
+        img{
+          width: 50px;
+        }
+        display: block;
+        position: static;
+        margin: auto;
+      }
+    }
+  }
+  
