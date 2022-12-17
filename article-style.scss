@@ -249,7 +249,85 @@ html{
 
   /*** main them design ***/
   #article-them{
-    height: 250px;
+    *{
+      margin: 15px;
+      //border : 1px solid black;
+      text-align: justify;
+    }
+    b,strong{
+      margin:0;
+    }
+    a{
+      margin : 0;
+      text-decoration: none;
+      color :#1f9589;
+      &:hover{
+        font-weight: 800;
+      }
+    }
+    details{
+      display: block;
+      height: 55px;
+      summary{ 
+        border-radius: 0 10px 10px 0;
+        padding : 14px;
+        width: 100px;
+        float: right;
+        background-color:#febc68 ;
+        margin:0;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        &:hover{
+          cursor: pointer;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+      }
+      p{
+        height: 100%;
+        border-radius: 10px;
+        padding: 2px 115px 2px 4px;
+        margin : 0;
+        background-color: #fcdb8c;
+      }
+    }
+    img{
+      display: block;
+      margin: auto;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    #tip{
+      height: 50px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 10px;
+      span{
+        border-radius: 0 10px 10px 0;
+        padding : 11px;
+        width: 100px;
+        float: right;
+        background-color:#febc68 ;
+        margin:0;
+      }
+      p{
+        height: 100%;
+        border-radius: 10px;
+        padding: 2px 115px 2px 4px;
+        margin : 0;
+        background-color: #fcdb8c;
+      }
+    }
+    #advice{
+      @extend #tip;
+      height: 85px;
+      span{
+        height: 85px;
+      }
+    }
+    #questions{
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      border-radius: 10px;
+      h4{
+        background-color: #febd6846;
+      }
+    }
   }
   
   /**footer**/
@@ -413,14 +491,14 @@ html{
   }
   
   /** a bug that prevent responsive nav bar opened when u expand its icons **/
-  @media only screen and (min-width: 970px) {
+  @media only screen and (min-width: 1100px) {
     #responsive-nav-bar {
       display: none !important;
     }
   }
   
   //** mobile responsive **//
-  @media only screen and (max-width: 970px) {
+  @media only screen and (max-width: 1100px) {
     /** original top head redesigned for mobile **/
     #top-head {
       height: 100px;
@@ -592,6 +670,25 @@ html{
       }
     }
   
+    /** main them **/
+    #article-them{
+      details{
+        height: 135px;
+      }
+      img{
+        max-width: 350px;
+      }
+      #tip{
+        height: 110px;
+      }
+      #advice{
+        height: 200px;
+        span{
+
+        }
+      }
+    }
+
     /** footer responsive redesigned **/
     #footer {
       height: 580px;

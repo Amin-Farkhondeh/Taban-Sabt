@@ -243,8 +243,82 @@ html {
 }
 
 /*** main them design ***/
-#article-them {
-  height: 250px;
+#article-them * {
+  margin: 15px;
+  text-align: justify;
+}
+#article-them b, #article-them strong {
+  margin: 0;
+}
+#article-them a {
+  margin: 0;
+  text-decoration: none;
+  color: #1f9589;
+}
+#article-them a:hover {
+  font-weight: 800;
+}
+#article-them details {
+  display: block;
+  height: 55px;
+}
+#article-them details summary {
+  border-radius: 0 10px 10px 0;
+  padding: 14px;
+  width: 100px;
+  float: right;
+  background-color: #febc68;
+  margin: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#article-them details summary:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#article-them details p {
+  height: 100%;
+  border-radius: 10px;
+  padding: 2px 115px 2px 4px;
+  margin: 0;
+  background-color: #fcdb8c;
+}
+#article-them img {
+  display: block;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#article-them #tip, #article-them #advice {
+  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+#article-them #tip span, #article-them #advice span {
+  border-radius: 0 10px 10px 0;
+  padding: 11px;
+  width: 100px;
+  float: right;
+  background-color: #febc68;
+  margin: 0;
+}
+#article-them #tip p, #article-them #advice p {
+  height: 100%;
+  border-radius: 10px;
+  padding: 2px 115px 2px 4px;
+  margin: 0;
+  background-color: #fcdb8c;
+}
+#article-them #advice {
+  height: 85px;
+}
+#article-them #advice span {
+  height: 85px;
+}
+#article-them #questions {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+}
+#article-them #questions h4 {
+  background-color: rgba(254, 189, 104, 0.2745098039);
 }
 
 /**footer**/
@@ -393,12 +467,12 @@ html {
   }
 }
 /** a bug that prevent responsive nav bar opened when u expand its icons **/
-@media only screen and (min-width: 970px) {
+@media only screen and (min-width: 1100px) {
   #responsive-nav-bar {
     display: none !important;
   }
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1100px) {
   /** original top head redesigned for mobile **/
   #top-head {
     height: 100px;
@@ -562,6 +636,19 @@ html {
   }
   #responsive-nav-bar #responsive-icon1:hover, #responsive-nav-bar #responsive-icon2:hover {
     cursor: pointer;
+  }
+  /** main them **/
+  #article-them details {
+    height: 135px;
+  }
+  #article-them img {
+    max-width: 350px;
+  }
+  #article-them #tip, #article-them #advice {
+    height: 110px;
+  }
+  #article-them #advice {
+    height: 200px;
   }
   /** footer responsive redesigned **/
   #footer {

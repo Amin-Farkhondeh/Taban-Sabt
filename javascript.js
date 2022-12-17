@@ -1,3 +1,5 @@
+// const details = document.querySelector("details");
+// details.setAttribute("open", "");
 costumerMovingSection: {
   let costumersName = [
     "ایمان پیمان",
