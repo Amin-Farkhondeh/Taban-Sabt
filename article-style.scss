@@ -249,6 +249,10 @@ html{
 
   /*** main them design ***/
   #article-them{
+    #ul{
+      display: flex;
+      flex-wrap: wrap;
+    }
     *{
       margin: 15px;
       //border : 1px solid black;

@@ -243,6 +243,10 @@ html {
 }
 
 /*** main them design ***/
+#article-them #ul {
+  display: flex;
+  flex-wrap: wrap;
+}
 #article-them * {
   margin: 15px;
   text-align: justify;
