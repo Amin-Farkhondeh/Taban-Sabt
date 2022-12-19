@@ -658,7 +658,10 @@ html {
     height: 110px;
   }
   #article-them #advice {
-    height: 200px;
+    height: 360px;
+  }
+  #article-them #advice span {
+    height: 360px;
   }
   /** footer responsive redesigned **/
   #footer {

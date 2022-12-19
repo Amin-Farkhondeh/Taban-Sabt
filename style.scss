@@ -260,7 +260,6 @@ body {
   #main-them-title {
     border-radius: 25px;
     margin: 180px 90px;
-
     h1 {
       font-size: 40px;
       font-family: $mainFont;
@@ -945,11 +944,13 @@ body {
     height: 400px;
     #main-them-title {
       margin-top: 100px;
+      width: 100%;
+      margin-right: 0;
       h1 {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 200;
       }
-      h2 {
+      p {
         font-size: 12px;
         font-weight: 100;
       }
