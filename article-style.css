@@ -243,6 +243,10 @@ html {
 }
 
 /*** main them design ***/
+#article-them {
+  max-width: 750px;
+  margin: auto;
+}
 #article-them #ul {
   display: flex;
   flex-wrap: wrap;
@@ -288,11 +292,12 @@ html {
 }
 #article-them img {
   display: block;
+  width: 100%;
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 #article-them #tip, #article-them #advice {
-  height: 50px;
+  height: 80px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
 }
@@ -303,6 +308,7 @@ html {
   float: right;
   background-color: #febc68;
   margin: 0;
+  height: 80px;
 }
 #article-them #tip p, #article-them #advice p {
   height: 100%;
@@ -312,10 +318,10 @@ html {
   background-color: #fcdb8c;
 }
 #article-them #advice {
-  height: 85px;
+  height: 145px;
 }
 #article-them #advice span {
-  height: 85px;
+  height: 145px;
 }
 #article-them #questions {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;

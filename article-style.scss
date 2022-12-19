@@ -249,6 +249,8 @@ html{
 
   /*** main them design ***/
   #article-them{
+    max-width: 750px;
+    margin: auto;
     #ul{
       display: flex;
       flex-wrap: wrap;
@@ -295,11 +297,12 @@ html{
     }
     img{
       display: block;
+      width: 100%;
       margin: auto;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
     #tip{
-      height: 50px;
+      height: 80px;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       border-radius: 10px;
       span{
@@ -309,6 +312,7 @@ html{
         float: right;
         background-color:#febc68 ;
         margin:0;
+        height: 80px;
       }
       p{
         height: 100%;
@@ -320,9 +324,9 @@ html{
     }
     #advice{
       @extend #tip;
-      height: 85px;
+      height: 145px;
       span{
-        height: 85px;
+        height: 145px;
       }
     }
     #questions{
