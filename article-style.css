@@ -649,19 +649,22 @@ html {
   }
   /** main them **/
   #article-them details {
-    height: 135px;
+    min-height: 50px;
+    height: auto;
   }
   #article-them img {
     max-width: 350px;
   }
   #article-them #tip, #article-them #advice {
-    height: 110px;
+    min-height: 80px;
+    height: auto;
+  }
+  #article-them #tip span, #article-them #advice span, #article-them #tip p, #article-them #advice p {
+    min-height: 80px;
+    height: auto;
   }
   #article-them #advice {
-    height: 360px;
-  }
-  #article-them #advice span {
-    height: 360px;
+    height: auto;
   }
   /** footer responsive redesigned **/
   #footer {

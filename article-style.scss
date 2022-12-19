@@ -681,19 +681,22 @@ html{
     /** main them **/
     #article-them{
       details{
-        height: 135px;
+        min-height: 50px;
+        height:auto;
       }
       img{
         max-width: 350px;
       }
       #tip{
-        height: 110px;
+        min-height: 80px;
+        height: auto;
+        span,p{
+          min-height: 80px;
+        height: auto;
+        }
       }
       #advice{
-        height: 360px;
-        span{
-          height: 360px;
-        }
+        height: auto;
       }
     }
 
