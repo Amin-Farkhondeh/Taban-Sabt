@@ -1,5 +1,22 @@
-// const details = document.querySelector("details");
-// details.setAttribute("open", "");
+TabelOfcontent:{
+  let tabelOfContent = document.getElementById("tabel-content");
+  
+  for(let i =1;i<=10;i++){
+    let vpName = 'vp' + i;
+    if(document.getElementById(vpName)==null)
+    break;
+    else {
+    let newElement = document.createElement('p');
+    newElement.innerHTML = document.getElementById(vpName).innerHTML;
+    let newLink = document.createElement('a');
+    newLink.setAttribute("href",'#'+vpName);
+    newLink.appendChild(newElement);
+    tabelOfContent.appendChild(newLink);
+  }
+  }
+  tabelOfContent.getElementsByTagName('p')[0].style.textAlign = "center";
+}
+
 costumerMovingSection: {
   let costumersName = [
     "ایمان پیمان",
@@ -163,3 +180,7 @@ navbarClicks: {
     }
   };
 }
+
+
+
+

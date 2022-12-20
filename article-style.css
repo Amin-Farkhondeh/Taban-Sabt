@@ -242,6 +242,30 @@ html {
   width: 70%;
 }
 
+/** Tabel of content **/
+#tabel-content {
+  text-align: right;
+  font-size: 12px;
+  font-weight: 100;
+  position: fixed;
+  margin: 10px;
+  top: 80px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 10px;
+  padding: 5px;
+}
+#tabel-content span {
+  display: block;
+  text-align: center;
+  background-color: rgba(96, 163, 158, 0.8549019608);
+  padding: 5px;
+  border-radius: 5px;
+}
+#tabel-content a {
+  text-decoration: none;
+  color: black;
+}
+
 /*** main them design ***/
 #article-them {
   max-width: 750px;
