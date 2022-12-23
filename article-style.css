@@ -254,6 +254,10 @@ html {
   border-radius: 10px;
   padding: 5px;
 }
+#tabel-content:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 #tabel-content span {
   display: block;
   text-align: center;
@@ -264,6 +268,9 @@ html {
 #tabel-content a {
   text-decoration: none;
   color: black;
+}
+#tabel-content a p {
+  border-radius: 5px;
 }
 
 /*** main them design ***/
@@ -544,6 +551,44 @@ html {
   #top-head #call-contact * {
     display: block;
     font-size: 10px;
+  }
+  /** tabel of content **/
+  #tabel-content {
+    background-color: rgba(67, 66, 71, 0.5607843137);
+    margin-top: 37px;
+    width: 180px;
+    right: calc(50% - 90px);
+    text-align: right;
+    font-size: 13px;
+    font-weight: 100;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    top: 1px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 0;
+    z-index: 3;
+  }
+  #tabel-content:hover {
+    cursor: pointer;
+  }
+  #tabel-content span {
+    text-align: center;
+    background-color: #60a39e;
+    border-radius: 0px;
+    height: 22px;
+    padding: 0;
+  }
+  #tabel-content a {
+    text-decoration: none;
+    color: black;
+    display: none;
+  }
+  #tabel-content a p {
+    background-color: white;
+    border-radius: 0;
   }
   /** original nav bar redesigned for mobile **/
   #nav-bar {

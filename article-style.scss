@@ -258,6 +258,10 @@ html{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 10px;
     padding: 5px;
+    &:hover{
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
     span{
       display: block;
       text-align: center;
@@ -267,7 +271,10 @@ html{
     }
     a{
       text-decoration: none;
-      color: black
+      color: black;
+      p{
+        border-radius: 5px;
+      }
     }
   }
 
@@ -566,6 +573,45 @@ html{
         * {
           display: block;
           font-size: 10px;
+        }
+      }
+    }
+
+    /** tabel of content **/
+    #tabel-content{
+      background-color: #4342478f;
+      margin-top:37px;
+      width: 180px;
+      right : calc(50% - 90px);
+      text-align: right;
+      font-size: 13px;
+      font-weight: 100;
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -o-sticky;
+      position: -ms-sticky;
+      position: sticky;
+      top : 1px;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      border-radius: 0;
+      z-index: 3;
+      &:hover{
+        cursor: pointer;
+      }
+      span{
+        text-align: center;
+        background-color: #60a39e;
+        border-radius: 0px;
+        height: 22px;
+        padding:0;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+        display: none;
+        p{
+          background-color: white;
+          border-radius: 0;
         }
       }
     }

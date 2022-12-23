@@ -1,21 +1,4 @@
-TabelOfcontent:{
-  let tabelOfContent = document.getElementById("tabel-content");
-  
-  for(let i =1;i<=10;i++){
-    let vpName = 'vp' + i;
-    if(document.getElementById(vpName)==null)
-    break;
-    else {
-    let newElement = document.createElement('p');
-    newElement.innerHTML = document.getElementById(vpName).innerHTML;
-    let newLink = document.createElement('a');
-    newLink.setAttribute("href",'#'+vpName);
-    newLink.appendChild(newElement);
-    tabelOfContent.appendChild(newLink);
-  }
-  }
-  tabelOfContent.getElementsByTagName('p')[0].style.textAlign = "center";
-}
+
 
 costumerMovingSection: {
   let costumersName = [
@@ -44,8 +27,9 @@ costumerMovingSection: {
     "مهندسی ستاوند آگور",
     "مهندسی سازه حرارت مشهد",
   ];
-  let costumerBox = document.getElementById("some-costumer-names");
+  
   setInterval(() => {
+    let costumerBox = document.getElementById("some-costumer-names");
     let rndNum = Math.floor(Math.random() * 24);
     newCostumer = document.createElement("h6"); //random costumer created
     newCostumer.setAttribute("class", "costumers"); //random costumer created
@@ -82,11 +66,11 @@ showTopHeadIcon : {
 let target2 = document.getElementById("our-costumer");
 let rect2;
 document.addEventListener("scroll", () => {
-  rect2 = target.getBoundingClientRect();
+  rect2 = target2.getBoundingClientRect();
   if (rect2.bottom <= window.innerHeight) {
     document.getElementById("go-top").style.display = "block";
   }
-  if (rect.bottom > window.innerHeight) {
+  if (rect2.bottom > window.innerHeight) {
     document.getElementById("go-top").style.display = "none";
   }
 }
@@ -163,22 +147,22 @@ navbarClicks: {
     }
   };
 
-  let arrow2 = document.getElementById("icon2-img");
-  let isRegisterExpand2 = false;
-  let registerIcon2 = document.getElementById("responsive-icon2");
-  let registerExpand2 = document.getElementById("responsive-grade-expand-more");
-  registerIcon2.onclick = () => {
-    if (!isRegisterExpand2) {
-      registerExpand2.style.display = "block";
-      registerExpand2.style.position = "relative";
-      arrow2.style.transform = "rotate(0deg)";
-      isRegisterExpand2 = true;
-    } else {
-      arrow2.style.transform = "rotate(90deg)";
-      registerExpand2.style.display = "none";
-      isRegisterExpand2 = false;
-    }
-  };
+  // let arrow2 = document.getElementById("icon2-img");
+  // let isRegisterExpand2 = false;
+  // let registerIcon2 = document.getElementById("responsive-icon2");
+  // let registerExpand2 = document.getElementById("responsive-grade-expand-more");
+  // registerIcon2.onclick = () => {
+  //   if (!isRegisterExpand2) {
+  //     registerExpand2.style.display = "block";
+  //     registerExpand2.style.position = "relative";
+  //     arrow2.style.transform = "rotate(0deg)";
+  //     isRegisterExpand2 = true;
+  //   } else {
+  //     arrow2.style.transform = "rotate(90deg)";
+  //     registerExpand2.style.display = "none";
+  //     isRegisterExpand2 = false;
+  //   }
+  // }
 }
 
 
