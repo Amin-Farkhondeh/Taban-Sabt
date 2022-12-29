@@ -278,6 +278,16 @@ html {
   max-width: 750px;
   margin: auto;
 }
+#article-them #number {
+  font-family: b-yekan;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+#article-them abbr {
+  margin: 0;
+  padding: 0;
+}
 #article-them #ul {
   display: flex;
   flex-wrap: wrap;

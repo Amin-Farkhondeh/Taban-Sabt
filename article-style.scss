@@ -282,13 +282,22 @@ html{
   #article-them{
     max-width: 750px;
     margin: auto;
+    #number{
+      font-family: b-yekan;
+      font-weight: 600;
+      margin : 0;
+      padding:0;
+    }
+    abbr{
+      margin : 0;
+      padding : 0;
+    }
     #ul{
       display: flex;
       flex-wrap: wrap;
     }
     *{
       margin: 15px;
-      //border : 1px solid black;
       text-align: justify;
     }
     b,strong{
